@@ -73,6 +73,7 @@ async function pushGit() {
   console.log(await execSync('git add .', { encoding: 'utf-8' }));
   console.log(await execSync(`git commit -m "${date}"`, { encoding: 'utf-8' }));
   console.log(await execSync('git push', { encoding: 'utf-8' }));
+  console.log(await execSync('git push -u wiki', { encoding: 'utf-8' }));
 }
 
 (async () => {
