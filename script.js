@@ -69,11 +69,10 @@ async function fetchFileTree(tree = [], root, basePath) {
 async function pushGit() {
   const { execSync } = require('node:child_process');
   const date = new Date().toLocaleString().replaceAll('/', '-');
-  console.log(await execSync('git pull origin main', { encoding: 'utf-8' }));
+  console.log(await execSync('git pull', { encoding: 'utf-8' }));
   console.log(await execSync('git add .', { encoding: 'utf-8' }));
   console.log(await execSync(`git commit -m "${date}"`, { encoding: 'utf-8' }));
-  console.log(await execSync('git push origin main', { encoding: 'utf-8' }));
-  console.log(await execSync('git push -u wiki master', { encoding: 'utf-8' }));
+  console.log(await execSync('git push', { encoding: 'utf-8' }));
 }
 
 (async () => {
