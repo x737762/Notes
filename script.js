@@ -32,7 +32,7 @@ async function createReadme(tree) {
     await fs.unlinkSync(readme);
   }
 
-  const template = `<div style="text-align: center"><img style="width: 200px; height: 200px;" src="./images/logo.jpg"><h1>一个臭写代码的牛马</h1></div><hr><div>${await createHtml(
+  const template = `<div align="center"><img style="width: 200px; height: 200px;" src="./images/logo.jpg"><h1>一个臭写代码的牛马</h1></div><hr><div>${await createHtml(
     tree,
   )}</div>`;
 
